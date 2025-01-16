@@ -1,18 +1,29 @@
 {
   "name": "@playwright/test",
   "version": "1.0.0",
-  "author": "Karan Shah",
+  "author": "",
   "engines": {
-    "node": ">=12.7.0"
+    "node": ""
   },
-  "description": "Sample package to show jest playwright tests run on BrowserStack",
+  "description": "Sample package to show playwright tests run on BrowserStack",
   "scripts": {
-    "test": "npx playwright test --config=./playwright.config.js",
-    "test:local": "BROWSERSTACK_LOCAL=true npx playwright test --config=./playwright-local.config.js"
+    "test": "export BUILD=\"$(date +%H%m%s)\" && npx playwright test --config=./playwright.config.js --workers=5",
+    "test:android": "export BUILD=\"$(date +%H%m%s)\" && npx playwright test --config=./playwright.android.config.js --workers=5",
+    "test:local": "BROWSERSTACK_LOCAL=true npx playwright test --config=./playwright-local.config.js",
+    "test:api": "export BUILD=\"$(date +%H%m%s)\" && npx playwright test --config=./api.config.js",
+    "test:inhouse": "npx playwright test --config=./playwright-inhouse.config.js --headed",
+    "postinstall": "npm update browserstack-node-sdk",
+    "test-browserstack": "export BUILD=\"$(date +%H%m%s)\" && npx browserstack-node-sdk playwright test --config=./playwright.config.js --workers=5",
+    "test:android-browserstack": "export BUILD=\"$(date +%H%m%s)\" && npx browserstack-node-sdk playwright test --config=./playwright.android.config.js --workers=5",
+    "test:local-browserstack": "BROWSERSTACK_LOCAL=true npx browserstack-node-sdk playwright test --config=./playwright-local.config.js",
+    "test:api-browserstack": "export BUILD=\"$(date +%H%m%s)\" && npx browserstack-node-sdk playwright test --config=./api.config.js",
+    "test:inhouse-browserstack": "npx browserstack-node-sdk playwright test --config=./playwright-inhouse.config.js --headed",
+    "test:tm-browserstack": "npx browserstack-node-sdk playwright test /tests/test_1.spec.js --config=./playwright-inhouse.config.js --headed"
   },
   "devDependencies": {
-    "playwright": "~1.17.2",
-    "@playwright/test": "~1.17.2",
-    "browserstack-local": "^1.4.8"
+    "@playwright/test": "1.38.1",
+    "browserstack-local": "^1.4.8",
+    "browserstack-node-sdk": "^1.34.30",
+    "playwright": "1.38.1"
   }
 }

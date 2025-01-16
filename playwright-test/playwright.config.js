@@ -6,7 +6,8 @@ const { devices } = require('@playwright/test');
 const config = {
   testDir: 'tests',
   testMatch: '**/*.spec.js',
-  timeout: 60000,
+  testIgnore: 'tests/api/*.spec.js',
+  timeout: 120000,
   use:{
     viewport: null
   },
@@ -21,29 +22,20 @@ const config = {
       },
     },
     {
-      name: 'chrome@latest-beta:OSX Big Sur@browserstack',
-      use: {
-        browserName: 'chromium',
-        channel: 'chrome',
-      },
-    },
-    {
       name: 'edge@90:Windows 10@browserstack',
       use: {
         browserName: 'chromium'
       },
     },
     {
-      name: 'playwright-firefox@latest:OSX Catalina@browserstack',
+      name: 'playwright-firefox@117:OSX Catalina@browserstack',
       use: {
-        browserName: 'firefox',
         ignoreHTTPSErrors: true
       },
     },
     {
-      name: 'playwright-webkit@latest:OSX Big Sur@browserstack',
+      name: 'playwright-webkit@17:OSX Big Sur@browserstack',
       use: {
-        browserName: 'webkit',
         // Config to use playwright emulated devices.
         // ...devices['iPhone 12 Pro Max'],
       },

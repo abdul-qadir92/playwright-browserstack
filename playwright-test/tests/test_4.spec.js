@@ -1,7 +1,7 @@
-const { test } = require('../fixtures');
+const { overwrittenTest } = require('../fixtures');
 const { expect } = require('@playwright/test');
-test.describe('feature foo', () => {
-  test('test 4', async ({ page }) => {
+overwrittenTest.describe('feature foo', () => {
+  overwrittenTest('test 4', async ({ page }) => {
     // Assertions use the expect API.
     await page.goto('https://www.duckduckgo.com');
     const element = await page.$('[name="q"]');

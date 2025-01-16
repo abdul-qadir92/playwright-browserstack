@@ -1,0 +1,24 @@
+
+
+Tue Dec 24 2024 13:28:11:51 GMT+0530 (IST) -- Binary semantic version is v8.9.10
+Tue Dec 24 2024 13:28:11:53 GMT+0530 (IST) -- Setting output as extra verbose with request parsing
+Tue Dec 24 2024 13:28:11:791 GMT+0530 (IST) -- Starting configuration console on http://localhost:45454
+Tue Dec 24 2024 13:28:13:221 GMT+0530 (IST) -- [SUCCESS] You can now access your local server(s) in our remote browser
+
+Tue Dec 24 2024 13:28:14:223 GMT+0530 (IST) -- Connecting to BrowserStack using WebSocket protocol...
+Tue Dec 24 2024 13:28:14:224 GMT+0530 (IST) -- Platform supports WebSocket connections.
+
+Tue Dec 24 2024 13:28:15:227 GMT+0530 (IST) -- Error in establishing connection.
+Tue Dec 24 2024 13:28:15:236 GMT+0530 (IST) -- ENOTFOUND
+Tue Dec 24 2024 13:28:15:906 GMT+0530 (IST) -- Connecting to BrowserStack using WebSocket protocol...
+Tue Dec 24 2024 13:28:15:919 GMT+0530 (IST) -- Platform supports WebSocket connections.
+
+Tue Dec 24 2024 13:28:16:487 GMT+0530 (IST) -- Connecting to BrowserStack using WebSocket protocol...
+Tue Dec 24 2024 13:28:16:501 GMT+0530 (IST) -- Platform supports WebSocket connections.
+
+Tue Dec 24 2024 13:28:18:372 GMT+0530 (IST) -- Connecting to BrowserStack using WebSocket protocol...
+Tue Dec 24 2024 13:28:18:373 GMT+0530 (IST) -- Platform supports WebSocket connections.
+
+Tue Dec 24 2024 13:28:18:375 GMT+0530 (IST) -- Press Ctrl-C to exit
+
+

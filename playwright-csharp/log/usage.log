@@ -1,0 +1,7 @@
+2025-01-13 16:10:09.5235|INFO|browserstack_sdk.utils|Using dotnet: /usr/local/share/dotnet/dotnet
+2025-01-13 16:10:10.8236|INFO|browserstack_sdk.Program|Detected Playwright version 1.19.1
+2025-01-13 16:10:10.8244|INFO|browserstack_sdk.Program|Running for f/w vanila none
+2025-01-13 16:10:10.9175|INFO|browserstack_sdk.Program|Detected dotnet version 8.0.200
+2025-01-13 16:10:10.9549|ERROR|browserstack_sdk.Program|Uncaught exception occured: System.Exception: Config file does not exist at any parent directory of . Please include a browserstack.yml/browserstack.yaml file containing configuration for tests.
+   at browserstack_sdk.YamlParser.parse(String browserStackConfigFilePath, JObject cliArgs, String projectDir) in D:\a\browserstack-csharp-sdk\browserstack-csharp-sdk\run-browserstack\browserstack-sdk\ParseYaml.cs:line 705
+   at browserstack_sdk.Program.Main(String[] args) in D:\a\browserstack-csharp-sdk\browserstack-csharp-sdk\run-browserstack\browserstack-sdk\Program.cs:line 621
