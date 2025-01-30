@@ -23,7 +23,7 @@
   "devDependencies": {
     "@playwright/test": "1.38.1",
     "browserstack-local": "^1.4.8",
-    "browserstack-node-sdk": "^1.34.30",
+    "browserstack-node-sdk": "^1.34.36",
     "playwright": "1.38.1"
   }
 }

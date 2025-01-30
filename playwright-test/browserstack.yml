@@ -11,7 +11,7 @@ accessKey:
 # ======================
 # The following capabilities are used to set up reporting on BrowserStack:
 # Set 'projectName' to the name of your project. Example, Marketing Website
-projectName: BrowserStack Playwright 
+projectName: Evolution
 # Set `buildName` as the name of the job / testsuite being run
 buildName: browserstack build 
 # `buildIdentifier` is a unique id to differentiate every execution that gets appended to
@@ -59,7 +59,7 @@ parallelsPerPlatform: 3
 # ==========================================
 # Set browserStackLocal to true if your website under test is not accessible publicly over the internet
 # Learn more about how BrowserStack Local works here -> https://www.browserstack.com/docs/automate/selenium/local-testing-introduction
-browserstackLocal: true # <boolean> (Default false)
+browserstackLocal: false # <boolean> (Default false)
 # browserStackLocalOptions:
 # Options to be passed to BrowserStack local in-case of advanced configurations
   # localIdentifier: # <string> (Default: null) Needed if you need to run multiple instances of local.
@@ -79,6 +79,7 @@ consoleLogs: errors # <string> Remote browser's console debug levels to be print
 # Visit observability.browserstack.com to see your test reports and insights. To disable test observability, specify `testObservability: false` in the key below.
 testObservability: true
 browserstackAutomation: true
+
 accessibility: true
 accessibilityOptions:
   wcagVersion: wcag21aa # Default: wcag21aa
@@ -86,3 +87,4 @@ accessibilityOptions:
     bestPractice: true # Default: false
     needsReview: true # Default: true
     experimental: true # Default: true
+  #excludeTagsInTestingScope: ['test 4']
