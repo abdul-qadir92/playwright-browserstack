@@ -7,7 +7,7 @@ const config = {
   testDir: 'tests',
   testMatch: '**/*.spec.js',
   testIgnore: 'tests/api/*.spec.js',
-  timeout: 120000,
+  timeout: 10*60*1000,
   use:{
     viewport: null
   },

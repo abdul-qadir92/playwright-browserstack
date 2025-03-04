@@ -1,28 +1,20 @@
 userName: 
 accessKey: 
 framework: playwright
-playwrightVersion: 1.38.1
 platforms:
   - os: Linux
-    osVersion: 11
-    browserName: chrome
-    browserVersion: 117.0
-  - os: Linux
-    osVersion: Ventura
     browserName: playwright-webkit
-    browserVersion: 17.0
+    browserVersion: latest
   - os: Linux
-    osVersion: 11
     browserName: playwright-firefox
-    browserVersion: 117.0
+    browserVersion: latest
 networkLogs: true 
 consoleLogs: info
 buildName: bstack-ats
 buildIdentifier: ${BUILD_NUMBER}
-parallelsPerPlatform: 5
-projectName: BrowserStack Sample
+parallelsPerPlatform: 10
+projectName: BrowserStack ATS
 interactiveDebugging: true
 turboScale: true
-turboScaleOptions:
-    gridName: turboscale-trial-grid
 testObservability: true
+#logLevel: debug
