@@ -8,6 +8,12 @@ platforms:
   - os: Linux
     browserName: playwright-firefox
     browserVersion: latest
+  - os: Linux
+    browserName: chrome
+    browserVersion: latest
+  - os: Linux
+    browserName: edge
+    browserVersion: latest
 networkLogs: true 
 consoleLogs: info
 buildName: bstack-ats
