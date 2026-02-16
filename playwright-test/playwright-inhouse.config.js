@@ -8,6 +8,7 @@ const config = {
   testMatch: '**/*.spec.js',
   testIgnore: 'tests/api/*.spec.js',
   timeout: 120000,
+ // retries: 2,
   use:{
     viewport: null
   },
@@ -16,11 +17,12 @@ const config = {
 
     // Test against playwright browsers
     {
-      name: "chrome",
+      name: "safari",
       use: {
-        browserName: "chromium",
+        browserName: "webkit",
+        headless: false,
         // Test against Chrome channel.
-        channel: "chrome",
+        //channel: "chrome",
       },
     },
   ],

@@ -1,12 +1,19 @@
 const { overwrittenTest } = require('../fixtures');
 const { expect } = require('@playwright/test');
 overwrittenTest.describe('feature foo', () => {
-  overwrittenTest('TC-3321 test 1', async ({ page }) => {
+  overwrittenTest('TC-5855 test 1', async ({ page }) => {
     // Assertions use the expect API.
     await page.goto('https://www.duckduckgo.com');
-    const element = await page.$('[name="q"]');
+    try {
+      await page.evaluate(_ => {}, `browserstack_executor: ${JSON.stringify({
+      "action": "lighthouseAudit"
+      })}`);
+    } catch (error) {
+    console.error('Error lighthouseAudit:', error);
+    }
+    const element = page.locator('[name="q"]');
     await element.click();
-    await element.type('BrowserStack');
+    await element.fill('BrowserStack');
     await element.press('Enter');
     const title = await page.title('');
     console.log(title);

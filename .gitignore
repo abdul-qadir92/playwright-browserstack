@@ -1,2 +1,6 @@
 node_modules
 *.log
+log/
+test-results/
+.obs_test_details-*/
+performance-report/

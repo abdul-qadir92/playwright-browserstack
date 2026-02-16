@@ -22,26 +22,31 @@ buildName: browserstack build
 buildIdentifier: '#${BUILD_NUMBER}' # Supports strings along with either/both ${expression}
 buildTag: "regresson"
 interactiveDebugging: true
+selfHeal: true
 # =======================================
 # Platforms (Browsers / Devices to test)
 # =======================================
 # Platforms object contains all the browser / device combinations you want to test on.
 # Entire list available here -> (https://www.browserstack.com/list-of-browsers-and-platforms/automate)
 platforms:
+  - deviceName: iPhone 16
+    browserName: safari # Try 'samsung' for Samsung browser
+    osVersion: 18.0
+    accessibility: false  
   - os: OS X
-    osVersion: Big Sur
-    browserName: Chrome
+    osVersion: Sonoma
+    browserName: chrome
     browserVersion: latest
-  - os: Windows
-    osVersion: 10
-    browserName: Edge
-    browserVersion: latest
-    accessibility: false
   - deviceName: Samsung Galaxy S22 Ultra
     browserName: chrome # Try 'samsung' for Samsung browser
     osVersion: 12.0
     accessibility: false
-    
+  - os: Windows
+    osVersion: 10
+    browserName: playwright-firefox
+    browserVersion: 139.0
+    accessibility: false
+  
 # =======================
 # Parallels per Platform
 # =======================
@@ -51,7 +56,7 @@ platforms:
 # Example 1 - If you have configured 3 platforms and set `parallelsPerPlatform` as 2, a total of 6 (2 * 3) parallel threads will be used on BrowserStack
 #
 # Example 2 - If you have configured 1 platform and set `parallelsPerPlatform` as 5, a total of 5 (1 * 5) parallel threads will be used on BrowserStack
-parallelsPerPlatform: 3
+parallelsPerPlatform: 2
 
 # ==========================================
 # BrowserStack Local
@@ -79,6 +84,7 @@ consoleLogs: errors # <string> Remote browser's console debug levels to be print
 # Visit observability.browserstack.com to see your test reports and insights. To disable test observability, specify `testObservability: false` in the key below.
 testObservability: true
 browserstackAutomation: true
+#browserstack.performance: report
 
 accessibility: true
 accessibilityOptions:
@@ -87,4 +93,4 @@ accessibilityOptions:
     bestPractice: true # Default: false
     needsReview: true # Default: true
     experimental: true # Default: true
-  #excludeTagsInTestingScope: ['test 4']
+  excludeTagsInTestingScope: ['test 4']
